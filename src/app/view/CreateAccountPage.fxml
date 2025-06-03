@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="400.0"
+            style="-fx-background-image: url('/assets/images/background.jpg'); -fx-background-size: cover;"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            stylesheets="@../assets/styles/fxml.css"
+            fx:controller="app.controller.CreateAccountPageController">
+    
+    <children>
+        <TextField fx:id="textField"
+                   layoutX="91.0" layoutY="175.0"
+                   prefHeight="45.0" prefWidth="217.0"
+                   promptText="Enter text here..."
+                   style="-fx-background-color: white; -fx-border-color: #8B4513; -fx-border-width: 2px; -fx-border-radius: 15; -fx-background-radius: 15; -fx-padding: 10 15; -fx-font-size: 14px; -fx-text-fill: #333333;" />
+
+        <Button fx:id="saveButton"
+                layoutX="150.0" layoutY="254.0"
+                text="SAVE"
+                disable="true" opacity="0.5"
+                onAction="#handleSaveButton"
+                style="-fx-background-color: #7ce02f; -fx-text-fill: white; -fx-background-radius: 15; -fx-padding: 10 30; -fx-font-size: 16px; -fx-font-weight: bold; -fx-cursor: hand;" />
+
+        <Button fx:id="cancelButton"
+                layoutX="146.0" layoutY="514.0"
+                text="Cancel"
+                onAction="#handleCancelButton"
+                style="-fx-background-color: #8B4513; -fx-text-fill: white; -fx-background-radius: 15; -fx-padding: 10 30; -fx-font-size: 16px; -fx-font-weight: bold; -fx-cursor: hand;" />
+    </children>
+</AnchorPane>

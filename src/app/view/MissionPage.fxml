@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.MissionPageController">
+   <top>
+      <!-- Header Section -->
+      <VBox prefHeight="137.0" prefWidth="400.0" style="-fx-background-color: linear-gradient(to bottom, #87CEEB, #98E4FF); -fx-padding: 20;">
+         <HBox alignment="CENTER_LEFT" spacing="20">
+            <!-- Player Info -->
+            <HBox alignment="CENTER" spacing="10" style="-fx-background-color: #8B4513; -fx-background-radius: 15; -fx-padding: 10;">
+               <ImageView fitHeight="30" fitWidth="30">
+                  <image>
+                     <Image url="@../images/player_icon.png" />
+                  </image>
+               </ImageView>
+               <Label fx:id="rankLabel" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Rank 1" textFill="WHITE" />
+            </HBox>
+            
+            <!-- Spacer -->
+            <Region HBox.hgrow="ALWAYS" />
+            
+            <!-- Gold and Gems -->
+            <HBox alignment="CENTER" spacing="15" style="-fx-background-color: #8B4513; -fx-background-radius: 15; -fx-padding: 10;">
+               <HBox alignment="CENTER" spacing="5">
+                  <ImageView fitHeight="25" fitWidth="25">
+                     <image>
+                        <Image url="@../images/gold_icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="goldLabel" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="100" textFill="WHITE" />
+               </HBox>
+               <HBox alignment="CENTER" spacing="5">
+                  <ImageView fitHeight="25" fitWidth="25">
+                     <image>
+                        <Image url="@../images/gem_icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="gemLabel" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="0" textFill="WHITE" />
+               </HBox>
+            </HBox>
+         </HBox>
+         
+         <!-- Mission Title -->
+         <VBox alignment="CENTER" prefHeight="50.0" prefWidth="360.0" spacing="10" style="-fx-padding: 20 0 0 0;">
+            <Label style="-fx-font-weight: bold; -fx-font-size: 18px;" text="Daily Missions" textFill="#8B4513" />
+            <Label style="-fx-font-size: 12px;" text="Complete missions to earn rewards and level up!" textFill="#8B4513" />
+         </VBox>
+      </VBox>
+   </top>
+   
+   <center>
+      <!-- Mission Content -->
+      <VBox spacing="10" style="-fx-background-color: #F5DEB3; -fx-padding: 20;">
+         <!-- Mission Type Tabs -->
+         <HBox alignment="CENTER" prefHeight="37.0" prefWidth="225.0" spacing="10">
+            <Button fx:id="dailyMissionBtn" contentDisplay="CENTER" onAction="#showDailyMissions" style="-fx-background-color: #8B4513; -fx-text-fill: white; -fx-background-radius: 15; -fx-padding: 10 20;" text="Daily Missions" />
+            <Button fx:id="longTermMissionBtn" onAction="#showLongTermMissions" style="-fx-background-color: #CD853F; -fx-text-fill: white; -fx-background-radius: 15; -fx-padding: 10 20;" text="Long-Term Missions" />
+         </HBox>
+         
+         <!-- Mission List Container -->
+         <ScrollPane fx:id="missionScrollPane" fitToWidth="true" style="-fx-background: transparent; -fx-background-color: transparent;">
+            <VBox fx:id="missionContainer" spacing="10" style="-fx-padding: 10;">
+               <!-- Missions will be dynamically added here -->
+            </VBox>
+         </ScrollPane>
+      </VBox>
+   </center>
+   
+   <bottom>
+      <!-- Back Button -->
+      <HBox alignment="CENTER" style="-fx-background-color: #CD853F; -fx-padding: 15;">
+         <Button fx:id="backBtn" onAction="#goBack" style="-fx-background-color: #8B4513; -fx-text-fill: white; -fx-background-radius: 15; -fx-padding: 10 30; -fx-font-size: 16px; -fx-font-weight: bold;">
+            <graphic>
+               <HBox alignment="CENTER" spacing="10">
+                  <ImageView fitHeight="20" fitWidth="20">
+                     <image>
+                        <Image url="@../images/back_icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-font-weight: bold;" text="BACK" textFill="WHITE" />
+               </HBox>
+            </graphic>
+         </Button>
+      </HBox>
+   </bottom>
+</BorderPane>

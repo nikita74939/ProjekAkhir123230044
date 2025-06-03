@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="rootPane" prefHeight="600.0" prefWidth="400.0"
+            style="-fx-background-image: url('/assets/images/background.jpg'); -fx-background-size: cover;"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            stylesheets="@../assets/styles/loginpage.css"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="app.controller.LoginPageController">
+</AnchorPane>

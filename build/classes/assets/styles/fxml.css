@@ -1,0 +1,52 @@
+/* Tombol Save */
+#saveButton {
+    -fx-background-color: #7ce02f;
+    -fx-text-fill: white;
+    -fx-background-radius: 15;
+    -fx-padding: 10 30;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+#saveButton:hover {
+    -fx-background-color: #6bb82a;
+    -fx-cursor: hand;
+}
+
+/* Tombol Cancel */
+#cancelButton {
+    -fx-background-color: #8B4513;
+    -fx-text-fill: white;
+    -fx-background-radius: 15;
+    -fx-padding: 10 30;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+#cancelButton:hover {
+    -fx-background-color: #a0522d;
+    -fx-cursor: hand;
+}
+
+/* Text field */
+.text-field-focused {
+    -fx-background-color: white;
+    -fx-border-color: #7ce02f;
+    -fx-border-width: 3px;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-padding: 10 15;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.text-field-unfocused {
+    -fx-background-color: white;
+    -fx-border-color: #8B4513;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-padding: 10 15;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
